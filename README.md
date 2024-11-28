@@ -3,7 +3,7 @@ I like to write bash scripts and small programs to accomplish tasks, I hope to g
 
 ## stats
 ![my github stats](https://github-readme-stats.vercel.app/api?username=40476&show_icons=true&theme=radical)\
-![languages](https://github-readme-stats.vercel.app/api/top-langs/?username=darwincereska&layout=compact&theme=radical)
+![languages](https://github-readme-stats.vercel.app/api/top-langs/?username=40476&layout=compact&theme=radical)
 
 <!--
 **40476/40476** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
