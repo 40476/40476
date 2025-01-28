@@ -1,6 +1,6 @@
 ## Hi there 👋
 I like to write bash scripts and small programs to accomplish tasks, I hope to get a career in streaming someday.
-
+My flagship software is {[streamonline, a livestream checker](https://github.com/40476/streamonline)} and I have a deep interest in vtubing and streaming (something I am unable to do due to network limitations).
 ## stats
 ![my github stats](https://github-readme-stats.vercel.app/api?username=40476&show_icons=true&theme=transparent)\
 ![languages](https://github-readme-stats.vercel.app/api/top-langs/?username=40476&layout=compact&theme=transparent)
