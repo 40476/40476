@@ -7,7 +7,7 @@ My flagship software is {[streamonline, a livestream checker](https://github.com
 <!-- ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=40476&theme=transparent) -->
 
 
-# Contact
+## Contact
 Send me a DM on [forums.opensuse.org](https://forums.opensuse.org)
 <!--
 **40476/40476** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
