@@ -5,6 +5,10 @@ My flagship software is {[streamonline, a livestream checker](https://github.com
 ![my github stats](https://github-readme-stats.vercel.app/api?username=40476&show_icons=true&theme=transparent)\
 ![languages](https://github-readme-stats.vercel.app/api/top-langs/?username=40476&layout=compact&theme=transparent)
 <!-- ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=40476&theme=transparent) -->
+
+
+# Contact
+Send me a DM on [forums.opensuse.org](https://forums.opensuse.org)
 <!--
 **40476/40476** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
