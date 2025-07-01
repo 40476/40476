@@ -9,71 +9,87 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
-  <div id="particles-js"></div>
+  
+  <div id="splash">
+    <img src="WiZE.webp" alt="WiZE Splash" />
+  </div>
+  <div id="main-content" style="display: none;">
 
-  <main class="terminal">
-    <header class="hero" data-aos="fade-down">
-      <h1>$ whoami</h1>
-      <p class="prompt">usr_40476</p>
-      <p class="desc">Linux tinkerer • Terminal UI builder • Stream toolsmith</p>
-    </header>
-
-    <section class="block" data-aos="fade-up">
-      <h2>$ cat about.txt</h2>
-      <p>I’m <strong>usr_40476</strong> — a Linux goober and builder of terminal-based tools. I love scripting, SHENANIGANS, and making the command line a more AWESOME place.</p>
-    </section>
-
-    <section class="block" data-aos="fade-up">
-      <h2>$ ls projects/</h2>
-
-      <div class="card">
-        <h3>🎵 songUI</h3>
-        <p>A terminal-based music player UI with Bluetooth and MPRIS2 integration.</p>
-        <ul>
-          <li>Bluetooth/local audio support</li>
-          <li>Animated progress bar</li>
-          <li>Low CPU usage</li>
-        </ul>
-        <a href="https://github.com/40476/songUI" target="_blank">View on GitHub</a>
-      </div>
-
-      <div class="card">
-        <h3>🎮 g510s Linux Driver</h3>
-        <p>Custom Linux support for the Logitech G510s keyboard.</p>
-        <ul>
-          <li>Reverse-engineered giggety drivers</li>
-          <li>Macro and LCD support</li>
-        </ul>
-        <a href="https://github.com/berendt/g510s" target="_blank">View on GitHub</a>
-      </div>
-
-      <div class="card">
-        <h3>📡 streamonline</h3>
-        <p>A terminal-native livestream checker for Linux.</p>
-        <ul>
-          <li>Streamlink + systemd integration</li>
-          <li>Low-bandwidth friendly</li>
-          <li>Opens streams in browser or media player</li>
-        </ul>
-        <a href="https://github.com/40476/streamonline" target="_blank">View on GitHub</a>
-      </div>
-    </section>
-
-    <section class="block" data-aos="fade-up">
-      <h2>$ cat skills.txt</h2>
-      <p>Bash scripting, terminal UI design, crappy Linux daemons, NICHE COLLECTORS KEYBOARD, and streaming tech.</p>
-    </section>
-
-    <footer data-aos="fade-up">
-      <p># Connect with me on <a href="https://github.com/40476" target="_blank">GitHub</a></p>
-    </footer>
-  </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <div id="particles-js"></div>
+  
+    <main class="terminal">
+      <header class="hero" data-aos="fade-down">
+        <h1>$ whoami</h1>
+        <p class="prompt">usr_40476</p>
+        <p class="desc">Linux tinkerer • Terminal UI builder • Stream toolsmith</p>
+      </header>
+  
+      <section class="block" data-aos="fade-up">
+        <h2>$ cat about.txt</h2>
+        <p>I’m <strong>usr_40476</strong> — a Linux goober and builder of terminal-based tools. I love scripting, SHENANIGANS, and making the command line a more AWESOME place.</p>
+      </section>
+  
+      <section class="block" data-aos="fade-up">
+        <h2>$ ls projects/</h2>
+  
+        <div class="card">
+          <h3>🎵 songUI</h3>
+          <p>A terminal-based music player UI with Bluetooth and MPRIS2 integration.</p>
+          <ul>
+            <li>Bluetooth/local audio support</li>
+            <li>Animated progress bar</li>
+            <li>Low CPU usage</li>
+          </ul>
+          <a href="https://github.com/40476/songUI" target="_blank">View on GitHub</a>
+        </div>
+  
+        <div class="card">
+          <h3>🎮 g510s Linux Driver</h3>
+          <p>Custom Linux support for the Logitech G510s keyboard.</p>
+          <ul>
+            <li>Reverse-engineered giggety drivers</li>
+            <li>Macro and LCD support</li>
+          </ul>
+          <a href="https://github.com/berendt/g510s" target="_blank">View on GitHub</a>
+        </div>
+  
+        <div class="card">
+          <h3>📡 streamonline</h3>
+          <p>A terminal-native livestream checker for Linux.</p>
+          <ul>
+            <li>Streamlink + systemd integration</li>
+            <li>Low-bandwidth friendly</li>
+            <li>Opens streams in browser or media player</li>
+          </ul>
+          <a href="https://github.com/40476/streamonline" target="_blank">View on GitHub</a>
+        </div>
+      </section>
+  
+      <section class="block" data-aos="fade-up">
+        <h2>$ cat skills.txt</h2>
+        <p>Bash scripting, terminal UI design, crappy Linux daemons, NICHE COLLECTORS KEYBOARD, and streaming tech.</p>
+      </section>
+  
+      <footer data-aos="fade-up">
+        <p># Connect with me on <a href="https://github.com/40476" target="_blank">GitHub</a></p>
+      </footer>
+    </main>
+  
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      particlesJS.load('particles-js', 'particles.json');
+    </script>
+  </div>
   <script>
-    AOS.init();
-    particlesJS.load('particles-js', 'particles.json');
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("splash").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+      }, 3000); // Adjust to match animation timing
+    });
   </script>
+
 </body>
 </html>
