@@ -4,31 +4,61 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>usr_40476</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
+  <link rel="icon" type="image/webp" href="media/images/WiZE.webp" />
+  <link rel="stylesheet" href="media/css/hack.css">
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="media/css/aos.css" />
 </head>
 <body>
   <div id="splash">
-    <img src="WiZE.webp" alt="WiZE Splash" />
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ201h0"><img src="media/images/WiZE.webp" alt="W i Z E splash logo" /></a>
   </div>
   <div id="main-content" style="display: none;">
-
-<!--     <div id="particles-js"></div> -->
   
     <main class="terminal">
-      <header class="hero" data-aos="fade-down">
-        <h1>usr_40476@sys:~> whoami</h1>
-        <p class="prompt">usr_40476</p>
-        <p class="desc">Linux goober • Terminal UI goober • Stream tools goober</p>
-      </header>
-  
-      <section class="block" data-aos="fade-up">
+      <div class="navbar">
+        <label><input type="radio" name="nav" value="about" checked> About</label>
+        <label><input type="radio" name="nav" value="memes"> Memes</label>
+        <label><input type="radio" name="nav" value="projects"> Projects</label>
+        <label><input type="radio" name="nav" value="stats"> Stats</label>
+        <label><input type="radio" name="nav" value="contact"> Contact</label>
+      </div>
+      
+      <section id="about" class="block" data-aos="fade-up">
+        <header class="hero" data-aos="fade-down">
+          <h1>usr_40476@sys:~> whoami</h1>
+          <p class="prompt">usr_40476</p>
+          <p class="desc">Linux goober • Terminal UI goober • Streaming utilities goober</p>
+        </header>
+        <div class="flex-box spaced">
+          <div>
+            <br>
+            <div style="background:#005555;" class="stat">BRUH</div>
+            <center><br>Bruh</center>
+          </div>
+          <div>
+            <br>
+            <div style="background:#005555;" class="stat">I WISH</div>
+            <center><br>VTuber</center>
+          </div>
+          <div>
+            <br>
+            <div style="background:#005555;" class="stat">100%</div>
+            <center><br>Zoomer</center>
+          </div>
+          <div>
+            <br>
+            <div style="background:#005555;" class="stat">100%</div>
+            <center><br>Maniac</center>
+          </div>
+        </div>
         <h2>usr_40476@sys:~> cat README.bruh.txt</h2>
         <p>I’m <strong>usr_40476</strong> — a Linux goober and builder of terminal-based tools. I love scripting, SHENANIGANS, and making the command line a more AWESOME place.</p>
+        <h2>usr_40476@sys:~> cat Documents/skills.txt</h2>
+        <p>Bash scripting, terminal UI design, sussy Linux daemons, NICHE COLLECTORS KEYBOARD (or so I'm told), and streaming tech.</p>
       </section>
   
-      <section class="block" data-aos="fade-up">
+      <section id="projects" class="block" data-aos="fade-up">
         <h2>usr_40476@sys:~> cat Projects/*.md</h2>
   
         <div class="card">
@@ -37,14 +67,24 @@
           <ul>
             <li>Bluetooth/local audio support</li>
             <li>Announce track info with espeak</li>
-            <li>Visualize audio with cava</li>
+            <li>Visualize audio with cava (eyecandy go brrr)</li>
             <li>Self contained</li>
           </ul>
           <a href="https://github.com/40476/songUI" target="_blank">View on GitHub</a>
         </div>
-  
+        
         <div class="card">
-          <h3>🎮 g510s Linux Driver</h3>
+          <h3>💬 voicething</h3>
+          <p>goofy ahh .</p>
+          <ul>
+            <li>whisper audio transcription to TTS (Like whatever Zentreya uses but its garbage and is made for Linux)</li>
+            <li>Macro and LCD support</li>
+          </ul>
+          <a href="https://github.com/40476/g510s" target="_blank">View on GitHub</a>
+        </div>
+        
+        <div class="card">
+          <h3>⌨️ g510s</h3>
           <p>Custom Linux support for the Logitech G510s keyboard.</p>
           <ul>
             <li>Reverse-engineered giggety drivers</li>
@@ -52,7 +92,7 @@
           </ul>
           <a href="https://github.com/40476/g510s" target="_blank">View on GitHub</a>
         </div>
-  
+        
         <div class="card">
           <h3>📡 streamonline</h3>
           <p>A terminal-native livestream checker for Linux.</p>
@@ -65,39 +105,102 @@
           <a href="https://github.com/40476/streamonline" target="_blank">View on GitHub</a>
         </div>
       </section>
-  
-      <section class="block" data-aos="fade-up">
-        <h2>usr_40476@sys:~> cat Documents/skills.txt</h2>
-        <p>Bash scripting, terminal UI design, sussy Linux daemons, NICHE COLLECTORS KEYBOARD (or so I'm told), and streaming tech.</p>
+      
+      <section id="memes" class="block" data-aos="fade-up">
+        <h2>usr_40476@sys:~> ls /run/media/usr_40476/Media/memes/ </h2><br>
+        <button class="sound-button" data-sound="media/audio/boop.mp3" style="background-color:#55ccff;">Boop!</button>
+        <button class="sound-button" data-sound="media/audio/vine-boom.mp3" style="background-color:#aaaaaa;"><h1>🗿</h1></button>
+        <button class="sound-button" data-sound="media/audio/bingus_spoingus.wav" style="background-color:#aa0000;">Bingus spoingus</button>
       </section>
-
-      <section class="block" data-aos="fade-up">
+      
+      <section id="contact" class="block" data-aos="fade-up">
+        <h2>usr_40476@sys:~> cat links_and_contact.txt</h2><br>
+        <ul>
+          <li>Spicy elf girls at : <a href="https://www.pixiv.net/en/users/109219544">u(sr_)40476</a></li>
+          <li>Matrix : <a href="https://matrix.to/#/@usr_40476:matrix.opensuse.org" target="_blank">@usr_40476:matrix.opensuse.org</a></li>
+          <li>CivitAI (NSFW warning) : <a href="https://civitai.com/user/u40476">u(sr_)40476</a></li>
+          <li>Github : <a href="https://github.com/40476">40476</a></li>
+          <li>Email (business only) : <a href="mailto:usr_40476@icloud.com">usr_40476@icloud.com</a></li>
+          
+        </ul>
+      </section>
+      
+      <section id="stats" class="block" data-aos="fade-up">
         <h2>usr_40476@sys:~> ./Projects/random/stats.sh</h2><br>
         <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=40476&theme=transparent"></img>
         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=40476&layout=compact&theme=transparent"></img>
         <img src="https://github-readme-stats.vercel.app/api?username=40476&show_icons=true&theme=transparent"></img>
       </section>
-  
-      <footer data-aos="fade-up">
-        <p># Connect with me on <a href="https://github.com/40476" target="_blank">GitHub</a></p>
-      </footer>
     </main>
-  
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="media/js/aos.js"></script>
     <script>
       AOS.init();
-      // particlesJS.load('particles-js', 'particles.json');
     </script>
   </div>
   <script>
     window.addEventListener("load", () => {
+      // Get all nav options from the navbar
+      const navInputs = Array.from(document.querySelectorAll('input[name="nav"]'));
+      const validPages = navInputs.map(input => input.value);
+
+      // Read query string
+      const params = new URLSearchParams(window.location.search);
+      const pageParam = params.get("page");
+
+      // Decide which section to show
+      const sectionToShow = validPages.includes(pageParam) ? pageParam : validPages[0];
+
+      // Set selected nav input
+      navInputs.forEach(input => input.checked = input.value === sectionToShow);
+
+      // After splash
       setTimeout(() => {
         document.getElementById("splash").style.display = "none";
         document.getElementById("main-content").style.display = "block";
-      }, 3000); // Adjust to match animation timing
+
+        document.querySelectorAll('.block').forEach(section => {
+          section.style.display = section.id === sectionToShow ? 'block' : 'none';
+        });
+      }, 3000);
     });
+    document.querySelectorAll('input[name="nav"]').forEach((radio) => {
+      radio.addEventListener('change', () => {
+        const selected = radio.value;
+        document.querySelectorAll('.block').forEach((section) => {
+          section.style.display = section.id === selected ? 'block' : 'none';
+        });
+      });
+    });
+    
+    const soundCache = {};
+
+    document.querySelectorAll('.sound-button').forEach(button => {
+      const soundSrc = button.getAttribute('data-sound');
+
+      button.addEventListener('click', async () => {
+        if (!soundSrc) return;
+
+        // If not cached, load and store blob
+        if (!soundCache[soundSrc]) {
+          try {
+            const response = await fetch(soundSrc);
+            const blob = await response.blob();
+            soundCache[soundSrc] = URL.createObjectURL(blob);
+          } catch (err) {
+            console.warn("Failed to load sound:", err);
+            return;
+          }
+        }
+
+        // Create new Audio instance from cached blob
+        const audio = new Audio(soundCache[soundSrc]);
+        audio.play().catch(err => console.warn("Audio play failed:", err));
+      });
+    });
+
   </script>
+
+
 
 </body>
 </html>

@@ -138,3 +138,49 @@ footer a {
     visibility: hidden;
   }
 }
+
+.flex-box{
+  display:flex;
+}
+
+.spaced{
+  justify-content:space-around;
+  overflow-x:auto;
+  overflow-y:hidden;
+}
+
+.stat:hover{
+  transform:rotate(360deg) scale(1.3);
+  transition:all 0.5s;
+}
+
+.stat{
+  width:75px;
+  height:75px;
+  display:flex;
+  border-radius:50%;
+  align-items:center;
+  font-weight:900;
+  justify-content:center;
+  transition:0.3s;
+  border:5px solid#AAAAAA;
+}
+
+
+.sound-button {
+  padding: 20px 40px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px rgba(0,0,0,0.3);
+  transition: all 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.sound-button:active {
+  box-shadow: 0 2px rgba(0,0,0,0.2);
+  transform: translateY(4px);
+}
