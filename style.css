@@ -6,10 +6,10 @@
 }
 body {
   font-family: 'Hack', monospace;
-  background-color: #0f1117;
   color: #e0e0e0;
   line-height: 1.6;
   padding: 20px;
+  background-color: #000000;
 }
 
 /* Hero section */
@@ -21,7 +21,7 @@ body {
   margin-bottom: 40px;
 }
 .hero h1 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Hack', monospace;
   font-size: 3rem;
   color: #00ffe1;
   animation: glow 2s ease-in-out infinite alternate;
@@ -30,6 +30,7 @@ body {
   font-size: 1.2rem;
   color: #ccc;
 }
+
 
 /* Section headings */
 section h2 {
@@ -149,12 +150,17 @@ footer a {
   overflow-y:hidden;
 }
 
-.stat:hover{
-  transform:rotate(360deg) scale(1.3);
+.stat_anim:hover{
+  transform:rotate(360deg) scale(1.5);
   transition:all 0.5s;
 }
 
-.stat{
+.statlong_anim:hover{
+  transform:rotate(3600deg) scale(1.5);
+  transition:all 2.5s;
+}
+
+.stat_base{
   width:75px;
   height:75px;
   display:flex;
@@ -163,7 +169,7 @@ footer a {
   font-weight:900;
   justify-content:center;
   transition:0.3s;
-  border:5px solid#AAAAAA;
+  border:5px solid #AAAAAA;
 }
 
 
