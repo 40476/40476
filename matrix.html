@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matrix</title>
+  <style>
+    * { margin: 0; padding: 0; }
+    body { background: black; overflow: hidden; }
+    canvas { display: block; }
+    #text {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      font-family: monospace;
+      color: white;
+      z-index: 999999;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <span id="text"></span>
+  <script>
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+
+    const queryParams = new URLSearchParams(window.location.search);
+    const customText = queryParams.get('text') || "new Date";
+    const color = `#${queryParams.get('color') || '0F0'}`;
+    const speed = parseFloat(queryParams.get('speed')) || 1;
+    const fade = parseFloat(queryParams.get('fade')) || 0.05;
+    const letters = queryParams.get('letters') || 'abcdefghijklmnopqrstuvwxyz0123456789';
+    const framerate = parseFloat(queryParams.get('fps')) || 30;
+    const size = parseFloat(queryParams.get('size')) || 16;
+    const font = queryParams.get('font') || 'monospace';
+    const verticalTravel = parseFloat(queryParams.get('verticalTravel')) || 14;
+    const horizontalTravel = parseFloat(queryParams.get('horizontalTravel')) || 0;
+    const effectiveSpeedX = speed * horizontalTravel;
+    const effectiveSpeedY = speed * verticalTravel;
+
+    let width, height, scale, columns, drops = [];
+
+    function resetDrops() {
+      columns = Math.floor(width / size);
+      drops = Array.from({ length: columns }, (_, i) => ({
+        x: i * size,
+        y: Math.random() * height
+      }));
+    }
+
+    function resizeCanvas() {
+      scale = window.devicePixelRatio || 1;
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width * scale;
+      canvas.height = height * scale;
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+      ctx.setTransform(scale, 0, 0, scale, 0, 0);
+      ctx.font = `${size}px ${font}`;
+      resetDrops();
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    let lastScreenWidth = screen.width;
+    let lastScreenHeight = screen.height;
+
+    function monitorScreenChange() {
+      if (screen.width !== lastScreenWidth || screen.height !== lastScreenHeight) {
+        lastScreenWidth = screen.width;
+        lastScreenHeight = screen.height;
+        resizeCanvas();
+      }
+    }
+    setInterval(monitorScreenChange, 1000); // check every second
+
+    function drawFrame() {
+      ctx.fillStyle = `rgba(0, 0, 0, ${fade})`;
+      ctx.fillRect(0, 0, width, height);
+
+      ctx.fillStyle = color;
+      drops.forEach(drop => {
+        const char = letters.charAt(Math.floor(Math.random() * letters.length));
+        ctx.fillText(char, drop.x, drop.y);
+
+        drop.x += effectiveSpeedX;
+        drop.y += effectiveSpeedY;
+
+        if (drop.x < 0 || drop.x > width) drop.x = Math.random() * width;
+        if (drop.y < 0 || drop.y > height) drop.y = 0;
+      });
+
+      try {
+        if(!customText==='none'){
+          document.getElementById('text').textContent = eval(customText);
+        }
+      } catch (e) {
+        document.getElementById('text').textContent = e.message;
+      }
+    }
+
+    let interval = null;
+    function startDrawing() {
+      if (!interval) {
+        interval = setInterval(drawFrame, 1000 / framerate);
+      }
+    }
+
+    function stopDrawing() {
+      if (interval) {
+        clearInterval(interval);
+        interval = null;
+      }
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      document.hidden ? stopDrawing() : startDrawing();
+    });
+
+    startDrawing();
+  </script>
+</body>
+</html>
