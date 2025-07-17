@@ -65,18 +65,6 @@
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    let lastScreenWidth = screen.width;
-    let lastScreenHeight = screen.height;
-
-    function monitorScreenChange() {
-      if (screen.width !== lastScreenWidth || screen.height !== lastScreenHeight) {
-        lastScreenWidth = screen.width;
-        lastScreenHeight = screen.height;
-        resizeCanvas();
-      }
-    }
-    setInterval(monitorScreenChange, 1000); // check every second
-
     function drawFrame() {
       ctx.fillStyle = `rgba(0, 0, 0, ${fade})`;
       ctx.fillRect(0, 0, width, height);
