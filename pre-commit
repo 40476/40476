@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+wget "https://static.cloudflareinsights.com/beacon.min.js" -O media/js/cloudflare.js

@@ -1,21 +1,54 @@
-## Hi there 👋
-I like to write bash scripts and small programs to accomplish tasks, I hope to get a career in streaming someday. I have a deep interest in vtubing and streaming (something I am unable to do due to network limitations).
-## stats
-![my github stats](https://github-readme-stats.vercel.app/api?username=40476&show_icons=true&theme=transparent)\
-![languages](https://github-readme-stats.vercel.app/api/top-langs/?username=40476&layout=compact&theme=transparent)\
-![languages](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=40476&theme=transparent)
+# usr\_40476@sys:~> cat README.bruh.txt
+-------------------------------------
 
-<!--
-**40476/40476** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Salutations (yea its cringe not sorry), you can call me **usr\_40476**, **40476**, or if you meet me in sky: **numbers**. I make small (ish) programs to accomplish tasks, I hope to get a career in streaming someday (something I just cant cook with (b a d   i n t e r n e t   **B T W   o\\/o**).
 
-Here are some ideas to get you started:
+usr\_40476@sys:~> cat Documents/things\_I\_do.txt
+-------------------------------------------------
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+zsh scripting, terminal UIs (python+curses), nonsense programs (Doofus Dot Ultra - coming soon!), &lt;more stuff when i remember to add it&gt;
+
+# usr\_40476@sys:~> cat Projects/\*/README.md
+-------------------------------------------
+
+### 🎵 songUI
+
+A terminal-based music player UI with Bluetooth and MPRIS2 integration.
+
+*   Bluetooth/local audio support
+*   Announce track info with espeak
+*   Visualize audio with cava (eyecandy go brrr)
+*   Self contained
+
+[View on GitHub](https://github.com/40476/songUI)
+
+### 💬 voicething
+
+coming soon!
+
+*   whisper audio transcription to TTS (Like whatever Zentreya uses but its garbage and is made for Linux)
+*   DBus integration
+*   Buggy af but it gets the job done
+
+[View on GitHub](https://github.com/40476/voicething)
+
+### ⌨️ g510s
+
+Custom Linux support for the Logitech G510s keyboard.
+
+*   Reverse-engineered giggety drivers
+*   Macro and LCD support
+
+[View on GitHub](https://github.com/40476/g510s)
+
+### 📡 streamonline
+
+A terminal-native livestream checker for Linux.
+
+*   Streamlink + systemd integration
+*   Low-bandwidth and resource compatible
+*   Opens streams in browser or media player
+*   Self contained
+
+[View on GitHub](https://github.com/40476/streamonline)
+
