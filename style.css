@@ -139,7 +139,6 @@ footer a {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  animation: fadeOut 2s ease 2s forwards;
 }
 
 #splash img {

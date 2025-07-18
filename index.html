@@ -150,7 +150,7 @@
     </script>
   </div>
   <script>
-    window.addEventListener("load", () => {
+    window.onload = function() {
       // Get all nav options from the navbar
       const navInputs = Array.from(document.querySelectorAll('input[name="nav"]'));
       const validPages = navInputs.map(input => input.value);
@@ -166,15 +166,13 @@
       navInputs.forEach(input => input.checked = input.value === sectionToShow);
 
       // After splash
-      setTimeout(() => {
-        document.getElementById("splash").style.display = "none";
-        document.getElementById("main-content").style.display = "block";
+      document.getElementById("splash").style.animation="fadeOut 2s ease 2s forwards";
 
-        document.querySelectorAll('.block').forEach(section => {
-          section.style.display = section.id === sectionToShow ? 'block' : 'none';
-        });
-      }, 3000);
-    });
+      document.getElementById("main-content").style.display = "block";
+      document.querySelectorAll('.block').forEach(section => {
+        section.style.display = section.id === sectionToShow ? 'block' : 'none';
+      });
+    };
     document.querySelectorAll('input[name="nav"]').forEach((radio) => {
       radio.addEventListener('change', () => {
         const selected = radio.value;
