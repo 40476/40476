@@ -1,0 +1,27 @@
+name: Mirror Sync
+
+on:
+  push:
+    branches:
+      - main  # or your default branch
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+      - name: Push to mirror repo
+        env:
+          MIRROR_PAT: ${{ secrets.WEBSITE_MIRROR }}
+        run: |
+          git remote add mirror https://x-access-token:${MIRROR_PAT}@github.com/40476/4076.github.io.git
+          git push --mirror mirror
