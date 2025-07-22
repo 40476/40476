@@ -24,4 +24,4 @@ jobs:
           WEBSITE_MIRROR: ${{ secrets.WEBSITE_MIRROR }}
         run: |
           git remote add mirror https://x-access-token:${WEBSITE_MIRROR}@github.com/40476/40476.github.io.git
-          git push --mirror mirror
+          git -c credential.helper= git push --mirror mirror
