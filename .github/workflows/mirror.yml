@@ -21,7 +21,7 @@ jobs:
 
       - name: Push to mirror repo
         env:
-          MIRROR_PAT: ${{ secrets.WEBSITE_MIRROR }}
+          WEBSITE_MIRROR: ${{ secrets.WEBSITE_MIRROR }}
         run: |
-          git remote add mirror https://x-access-token:${MIRROR_PAT}@github.com/40476/40476.github.io.git
+          git remote add mirror https://x-access-token:${WEBSITE_MIRROR}@github.com/40476/40476.github.io.git
           git push --mirror mirror
