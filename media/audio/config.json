@@ -80,7 +80,7 @@
     "color": "#dfce7b"
   },
   {
-    "name": "🗿",
+    "name": "\ud83d\uddff",
     "location": "media/audio/new-vine-boom.mp3",
     "color": "#915a35"
   },
@@ -108,5 +108,15 @@
     "name": "new-ee1bde0403ee459ed7c08a98dfc0b452b46b87141d2f02dc6d2cff2eb98189dc.jpeg",
     "location": "media/audio/new-ee1bde0403ee459ed7c08a98dfc0b452b46b87141d2f02dc6d2cff2eb98189dc.jpeg",
     "color": "#5ce854"
+  },
+  {
+    "name": "new-bogos-binted.mp3",
+    "location": "media/audio/new-bogos-binted.mp3",
+    "color": "#2dbcde"
+  },
+  {
+    "name": "new-photos-printed.mp3",
+    "location": "media/audio/new-photos-printed.mp3",
+    "color": "#8f5707"
   }
 ]
