@@ -78,11 +78,11 @@
         drop.y += effectiveSpeedY;
 
         if (drop.x < 0 || drop.x > width) drop.x = Math.random() * width;
-        if (drop.y < 0 || drop.y > (height + verticalTravel)) drop.y = 0;
+        if (drop.y < 0 || drop.y > height) drop.y = 0;
       });
 
       try {
-        if(!customText==='none'){
+        if(customText!=='none'){
           document.getElementById('text').textContent = eval(customText);
         }
       } catch (e) {

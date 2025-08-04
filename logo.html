@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JS-Controlled Rotating Frame</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .square-wrapper {
+      position: relative;
+      width: 220px;
+      height: 220px;
+    }
+
+    .rotated-square {
+      width: 200px;
+      height: 200px;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loader {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      box-sizing: border-box;
+      transition: transform 3s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ring,
+    .ring-alt {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 4px solid white;
+      box-sizing: border-box;
+    }
+
+    .ring-alt {
+      border-color: #00FFFF;
+    }
+
+    .text {
+      color: #00FFFF;
+      font-size: 4em;
+      text-align: center;
+      transform: rotate(-45deg);
+      line-height: 1.2;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="square-wrapper">
+    <div class="rotated-square">
+      <div class="loader">
+        <div class="ring"></div>
+        <div class="ring-alt"></div>
+      </div>
+      <div class="text">W i<br>Z E</div>
+    </div>
+  </div>
+
+  <script>
+    const loader = document.querySelector('.loader');
+    let angle = 0;
+
+    function rotate() {
+      angle += 360;
+      loader.style.transform = `rotate(${angle}deg)`;
+    }
+
+    function loopAnimation() {
+      rotate();
+      setTimeout(loopAnimation, 8000); // 3s rotate + 15s pause
+    }
+    loopAnimation();
+  </script>
+</body>
+</html>
