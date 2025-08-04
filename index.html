@@ -263,13 +263,24 @@
   </script>
   <script>
     const summaryText = document.getElementById("summary").innerText;
-    let metaTag = document.querySelector("meta[name='description']");
-    if (!metaTag) {
-      metaTag = document.createElement("meta");
-      metaTag.name = "description";
-      document.head.appendChild(metaTag);
+
+    // Set standard meta description
+    let descTag = document.querySelector("meta[name='description']");
+    if (!descTag) {
+      descTag = document.createElement("meta");
+      descTag.name = "description";
+      document.head.appendChild(descTag);
     }
-    metaTag.content = summaryText;
+    descTag.content = summaryText;
+
+    // Set Open Graph description
+    let ogTag = document.querySelector("meta[property='og:description']");
+    if (!ogTag) {
+      ogTag = document.createElement("meta");
+      ogTag.setAttribute("property", "og:description");
+      document.head.appendChild(ogTag);
+    }
+    ogTag.setAttribute("content", summaryText);
   </script>
 </body>
 
