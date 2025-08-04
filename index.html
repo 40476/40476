@@ -120,9 +120,7 @@
       
       <section id="memes" class="block" data-aos="fade-up">
         <h2>usr_40476@sys:~> ls /run/media/usr_40476/Media/memes/ </h2><br>
-        <button class="sound-button" data-sound="media/audio/new-boop.mp3" style="background-color:#55ccff;">Boop!</button>
-        <button class="sound-button" data-sound="media/audio/new-vine-boom.mp3" style="background-color:#aaaaaa;"><h1>🗿</h1></button>
-        <button class="sound-button" data-sound="media/audio/new-bingus_spoingus.wav" style="background-color:#aa0000;">Bingus spoingus</button>
+        <div id="soundboard"></div>
       </section>
       
       <section id="links_and_contact" class="block" data-aos="fade-up">
@@ -151,6 +149,7 @@
   </div>
   <script>
     window.onload = function() {
+    loadSoundboard();
       // Get all nav options from the navbar
       const navInputs = Array.from(document.querySelectorAll('input[name="nav"]'));
       const validPages = navInputs.map(input => input.value);
@@ -185,29 +184,44 @@
     
     const soundCache = {};
 
-    document.querySelectorAll('.sound-button').forEach(button => {
-      const soundSrc = button.getAttribute('data-sound');
+  async function loadSoundboard() {
+    try {
+      const response = await fetch("media/audio/config.json");
+      const files = await response.json(); // expects array of {name, location, color}
 
-      button.addEventListener('click', async () => {
-        if (!soundSrc) return;
+      const soundboard = document.getElementById("soundboard");
+      files.forEach(file => {
+        const button = document.createElement("button");
+        button.className = "sound-button";
+        button.textContent = file.name;
+        button.style.backgroundColor = file.color;
+        button.setAttribute("data-sound", file.location);
 
-        // If not cached, load and store blob
-        if (!soundCache[soundSrc]) {
-          try {
-            const response = await fetch(soundSrc);
-            const blob = await response.blob();
-            soundCache[soundSrc] = URL.createObjectURL(blob);
-          } catch (err) {
-            console.warn("Failed to load sound:", err);
-            return;
+        button.addEventListener("click", async () => {
+          const soundSrc = file.location;
+          if (!soundSrc) return;
+
+          if (!soundCache[soundSrc]) {
+            try {
+              const res = await fetch(soundSrc);
+              const blob = await res.blob();
+              soundCache[soundSrc] = URL.createObjectURL(blob);
+            } catch (err) {
+              console.warn("Failed to load sound:", err);
+              return;
+            }
           }
-        }
 
-        // Create new Audio instance from cached blob
-        const audio = new Audio(soundCache[soundSrc]);
-        audio.play().catch(err => console.warn("Audio play failed:", err));
+          const audio = new Audio(soundCache[soundSrc]);
+          audio.play().catch(err => console.warn("Audio play failed:", err));
+        });
+
+        soundboard.appendChild(button);
       });
-    });
+    } catch (error) {
+      console.error("Failed to load soundboard config:", error);
+    }
+  }
 
   </script>
 

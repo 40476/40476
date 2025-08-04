@@ -47,7 +47,7 @@ body {
 .hero h1 {
   font-family: 'Hack', monospace;
   font-size: 3rem;
-  color: #00ffe1;
+  color: #00dfe1;
   animation: glow 2s ease-in-out infinite alternate;
 }
 
@@ -62,8 +62,8 @@ body {
 section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #00ffe1;
-  border-bottom: 2px solid #00ffe1;
+  color: #00dfe1;
+  border-bottom: 2px solid #00dfe1;
   display: inline-block;
 }
 
@@ -91,7 +91,7 @@ section h2 {
   box-shadow: 0 0 15px rgba(0, 255, 225, 0.2);
 }
 .card h3 {
-  color: #00ffe1;
+  color: #00dfe1;
   margin-bottom: 10px;
 }
 .card ul {
@@ -99,7 +99,7 @@ section h2 {
   padding-left: 20px;
 }
 .card a {
-  color: #00ffe1;
+  color: #00dfe1;
   text-decoration: none;
   font-weight: bold;
 }
@@ -115,16 +115,16 @@ footer {
   color: #888;
 }
 footer a {
-  color: #00ffe1;
+  color: #00dfe1;
 }
 
 /* Animations */
 @keyframes glow {
   from {
-    text-shadow: 0 0 5px #00ffe1, 0 0 10px #00ffe1;
+    text-shadow: 0 0 5px #00dfe1, 0 0 10px #00dfe1;
   }
   to {
-    text-shadow: 0 0 15px #00ffe1, 0 0 30px #00ffe1;
+    text-shadow: 0 0 15px #00dfe1, 0 0 30px #00dfe1;
   }
 }
 
