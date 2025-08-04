@@ -48,7 +48,7 @@ body {
   font-family: 'Hack', monospace;
   font-size: 3rem;
   color: #00dfe1;
-  animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
 .hero p {
