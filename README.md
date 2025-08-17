@@ -24,8 +24,6 @@ A terminal-based music player UI with Bluetooth and MPRIS2 integration.
 
 ### 💬 voicething
 
-coming soon!
-
 *   whisper audio transcription to TTS (inspired by what Zentreya uses but its garbage and is made for Linux) 
 *   DBus integration
 *   Buggy af but it gets the job done
