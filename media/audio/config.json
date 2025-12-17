@@ -1,122 +1,172 @@
 [
   {
-    "name": "Alert Siren",
+    "name": "new-999-social-credit-siren.mp3",
     "location": "media/audio/new-999-social-credit-siren.mp3",
-    "color": "#e53d47"
+    "color": "#dd77ec"
   },
   {
-    "name": "AUUGHHH!",
-    "location": "media/audio/new-auughhh.mp3",
-    "color": "#920d22"
-  },
-  {
-    "name": "Bad to the Bone",
-    "location": "media/audio/new-bad-to-the-bone-meme.mp3",
-    "color": "#6f3ba8"
-  },
-  {
-    "name": "Bingus Spoingus",
-    "location": "media/audio/new-bingus_spoingus.wav",
-    "color": "#215a26"
-  },
-  {
-    "name": "boop",
-    "location": "media/audio/new-boop.mp3",
-    "color": "#ee5724"
-  },
-  {
-    "name": "Cartoon Running",
-    "location": "media/audio/new-cartoon-running.mp3",
-    "color": "#bb1e06"
-  },
-  {
-    "name": "Funny chase music",
-    "location": "media/audio/new-chase_QnUxJTk.mp3",
-    "color": "#f74dd7"
-  },
-  {
-    "name": "fart.mp3",
-    "location": "media/audio/new-dry-fart.mp3",
-    "color": "#2fe0a7"
-  },
-  {
-    "name": "NOT THE INTERNET NOT AGAIN",
-    "location": "media/audio/new-loading-lost-connection-green-screen-with-sound-effect-2_K8HORkT.mp3",
-    "color": "#417929"
-  },
-  {
-    "name": "Outro Music",
-    "location": "media/audio/new-outro-music.mp3",
-    "color": "#b9fe65"
-  },
-  {
-    "name": "rectoballs.wav",
-    "location": "media/audio/new-rectoballs.wav",
-    "color": "#c08e64"
-  },
-  {
-    "name": "rehehehe!",
-    "location": "media/audio/new-rehehehe.mp3",
-    "color": "#23ceef"
-  },
-  {
-    "name": "my gf likes this idk why",
-    "location": "media/audio/new-saja-boys-soda-pop.mp3",
-    "color": "#69b3cb"
-  },
-  {
-    "name": "skedaddle",
-    "location": "media/audio/new-skedaddle.mp3",
-    "color": "#9cfb47"
-  },
-  {
-    "name": "Tokyo Drift",
-    "location": "media/audio/new-tokyo_drift.mp3",
-    "color": "#2869e6"
-  },
-  {
-    "name": "GET OUT",
-    "location": "media/audio/new-tuco-get-out.mp3",
-    "color": "#dfce7b"
-  },
-  {
-    "name": "\ud83d\uddff",
-    "location": "media/audio/new-vine-boom.mp3",
-    "color": "#915a35"
-  },
-  {
-    "name": "kguysndrnkdjkneawlief",
-    "location": "media/audio/new-wild-thornberrys-donnie.mp3",
-    "color": "#264a2f"
-  },
-  {
-    "name": "Autobots, Roll Out",
+    "name": "new-autobots-transform-and-roll-out.mp3",
     "location": "media/audio/new-autobots-transform-and-roll-out.mp3",
-    "color": "#b6ca27"
+    "color": "#d16d7c"
   },
   {
-    "name": "Hold Music",
+    "name": "new-auughhh.mp3",
+    "location": "media/audio/new-auughhh.mp3",
+    "color": "#c28624"
+  },
+  {
+    "name": "new-bad-to-the-bone-meme.mp3",
+    "location": "media/audio/new-bad-to-the-bone-meme.mp3",
+    "color": "#45c8e1"
+  },
+  {
+    "name": "new-boop.mp3",
+    "location": "media/audio/new-boop.mp3",
+    "color": "#3ee824"
+  },
+  {
+    "name": "new-cartoon-running.mp3",
+    "location": "media/audio/new-cartoon-running.mp3",
+    "color": "#606d72"
+  },
+  {
+    "name": "new-chase_QnUxJTk.mp3",
+    "location": "media/audio/new-chase_QnUxJTk.mp3",
+    "color": "#19ae1c"
+  },
+  {
+    "name": "new-dry-fart.mp3",
+    "location": "media/audio/new-dry-fart.mp3",
+    "color": "#a3ef08"
+  },
+  {
+    "name": "new-loading-lost-connection-green-screen-with-sound-effect-2_K8HORkT.mp3",
+    "location": "media/audio/new-loading-lost-connection-green-screen-with-sound-effect-2_K8HORkT.mp3",
+    "color": "#104a1f"
+  },
+  {
+    "name": "new-musica-elevador-short.mp3",
     "location": "media/audio/new-musica-elevador-short.mp3",
-    "color": "#425913"
+    "color": "#dc8d96"
   },
   {
-    "name": "T H X",
+    "name": "new-rehehehe.mp3",
+    "location": "media/audio/new-rehehehe.mp3",
+    "color": "#ac0dd3"
+  },
+  {
+    "name": "new-saja-boys-soda-pop.mp3",
+    "location": "media/audio/new-saja-boys-soda-pop.mp3",
+    "color": "#8b965f"
+  },
+  {
+    "name": "new-skedaddle.mp3",
+    "location": "media/audio/new-skedaddle.mp3",
+    "color": "#f478de"
+  },
+  {
+    "name": "new-thx.mp3",
     "location": "media/audio/new-thx.mp3",
-    "color": "#838955"
+    "color": "#e23053"
   },
   {
-    "name": "new-ee1bde0403ee459ed7c08a98dfc0b452b46b87141d2f02dc6d2cff2eb98189dc.jpeg",
-    "location": "media/audio/new-ee1bde0403ee459ed7c08a98dfc0b452b46b87141d2f02dc6d2cff2eb98189dc.jpeg",
-    "color": "#5ce854"
+    "name": "new-tokyo_drift.mp3",
+    "location": "media/audio/new-tokyo_drift.mp3",
+    "color": "#e87b3e"
+  },
+  {
+    "name": "new-tuco-get-out.mp3",
+    "location": "media/audio/new-tuco-get-out.mp3",
+    "color": "#2d1d11"
+  },
+  {
+    "name": "new-vine-boom.mp3",
+    "location": "media/audio/new-vine-boom.mp3",
+    "color": "#2e8b3a"
+  },
+  {
+    "name": "new-wild-thornberrys-donnie.mp3",
+    "location": "media/audio/new-wild-thornberrys-donnie.mp3",
+    "color": "#aa2a81"
   },
   {
     "name": "new-bogos-binted.mp3",
     "location": "media/audio/new-bogos-binted.mp3",
-    "color": "#2dbcde"
+    "color": "#1e6e6d"
   },
   {
     "name": "new-photos-printed.mp3",
     "location": "media/audio/new-photos-printed.mp3",
-    "color": "#8f5707"
+    "color": "#77e8d3"
+  },
+  {
+    "name": "new-amoogus.mp3",
+    "location": "media/audio/new-amoogus.mp3",
+    "color": "#95930c"
+  },
+  {
+    "name": "new-rizz-sound-effect.mp3",
+    "location": "media/audio/new-rizz-sound-effect.mp3",
+    "color": "#961762"
+  },
+  {
+    "name": "new-smoke-detector-beep.mp3",
+    "location": "media/audio/new-smoke-detector-beep.mp3",
+    "color": "#62ad42"
+  },
+  {
+    "name": "new-bone-crack.mp3",
+    "location": "media/audio/new-bone-crack.mp3",
+    "color": "#d4583c"
+  },
+  {
+    "name": "new-metal-pipe-clang.mp3",
+    "location": "media/audio/new-metal-pipe-clang.mp3",
+    "color": "#48e770"
+  },
+  {
+    "name": "new-outro-song_oqu8zAg.mp3",
+    "location": "media/audio/new-outro-song_oqu8zAg.mp3",
+    "color": "#3f7f35"
+  },
+  {
+    "name": "new-movie_1.mp3",
+    "location": "media/audio/new-movie_1.mp3",
+    "color": "#b431ea"
+  },
+  {
+    "name": "new-ny-video-online-audio-converter.mp3",
+    "location": "media/audio/new-ny-video-online-audio-converter.mp3",
+    "color": "#733799"
+  },
+  {
+    "name": "new-mlg-airhorn.mp3",
+    "location": "media/audio/new-mlg-airhorn.mp3",
+    "color": "#2dcd7e"
+  },
+  {
+    "name": "new-explosion-meme_dTCfAHs.mp3",
+    "location": "media/audio/new-explosion-meme_dTCfAHs.mp3",
+    "color": "#7a44fa"
+  },
+  {
+    "name": "new-tindeck_1.mp3",
+    "location": "media/audio/new-tindeck_1.mp3",
+    "color": "#a167b6"
+  },
+  {
+    "name": "new-yeah-boiii-i-i-i.mp3",
+    "location": "media/audio/new-yeah-boiii-i-i-i.mp3",
+    "color": "#2ac65b"
+  },
+  {
+    "name": "new-snore-mimimimimimi.mp3",
+    "location": "media/audio/new-snore-mimimimimimi.mp3",
+    "color": "#6fb389"
+  },
+  {
+    "name": "new-bonk_7zPAD7C.mp3",
+    "location": "media/audio/new-bonk_7zPAD7C.mp3",
+    "color": "#4027a2"
   }
 ]
