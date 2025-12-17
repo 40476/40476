@@ -18,8 +18,14 @@
 
     canvas {
       display: block;
+      position: absolute;
     }
-
+iframe {
+      display: block;
+      position: absolute;
+      width:100vw;
+      height:100vh;
+    }
     #text {
       position: absolute;
       left: 10px;
@@ -32,7 +38,10 @@
 </head>
 
 <body>
+
   <canvas id="matrix"></canvas>
+  <!-- <canvas id="visualizer"></canvas> -->
+  <!-- <iframe src="vizu.html"></iframe> -->
   <span id="text"></span>
   <script>
     const canvas = document.getElementById('matrix');
@@ -58,9 +67,12 @@
       columns = Math.floor(width / size);
       drops = Array.from({ length: columns }, (_, i) => ({
         x: i * size,
-        y: Math.random() * height
+        y: Math.random() * height,
+        delay: 0,
+        delayCounter: 0
       }));
     }
+
 
     function resizeCanvas() {
       scale = window.devicePixelRatio || 1;
@@ -84,6 +96,11 @@
 
       ctx.fillStyle = color;
       drops.forEach(drop => {
+        if (drop.delayCounter > 0) {
+          drop.delayCounter--;
+          return; // Skip drawing this frame
+        }
+
         const char = letters.charAt(Math.floor(Math.random() * letters.length));
         ctx.fillText(char, drop.x, drop.y);
 
@@ -91,7 +108,12 @@
         drop.y += effectiveSpeedY;
 
         if (drop.x < 0 || drop.x > width) drop.x = Math.random() * width;
-        if (drop.y < 0 || drop.y > height) drop.y = 0;
+
+        if (drop.y > height) {
+          drop.y = 0;
+          drop.delay = Math.floor(Math.random() * 20); // Random delay between 0–20 frames
+          drop.delayCounter = drop.delay;
+        }
       });
 
       try {
@@ -102,6 +124,7 @@
         document.getElementById('text').textContent = e.message;
       }
     }
+
 
     let interval = null;
     function startDrawing() {
@@ -124,5 +147,4 @@
     startDrawing();
   </script>
 </body>
-
 </html>
