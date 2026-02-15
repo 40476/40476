@@ -8,7 +8,7 @@
   <link rel="icon" type="image/webp" href="media/images/WiZE.webp" />
   <link rel="stylesheet" href="media/css/hack.css">
   <link rel="stylesheet" href="style.css" />
-  <div id="CFWA_wrapper"></div>
+
   <link rel="stylesheet" href="media/css/aos.css" />
 </head>
 
@@ -26,7 +26,7 @@
         <label><input type="radio" name="nav" value="projects"> Projects</label>
         <label><input type="radio" name="nav" value="stats"> Stats</label>
         <label><input type="radio" name="nav" value="links_and_contact"> Links and Contact</label>
-        <label><input type="checkbox" id="cfCheckbox" checked> Enable Analytics</label>
+     
 
       </div>
 
@@ -234,33 +234,7 @@
       }
     }
   </script>
-  <script>
-    const checkbox = document.getElementById("cfCheckbox");
-    const storageKey = "cfAnalyticsEnabled";
 
-    // If no stored preference, set default to true
-    if (localStorage.getItem(storageKey) === null) {
-      localStorage.setItem(storageKey, "true");
-    }
-
-    const enabled = localStorage.getItem(storageKey) === "true";
-    checkbox.checked = enabled;
-
-    // Inject script if analytics is enabled
-    if (enabled) {
-      const script = document.createElement("script");
-      script.defer = true;
-      script.src = "media/js/cloudflare.js";
-      script.setAttribute("data-cf-beacon", '{"token": "27e14b77966946318f755b776f2ded57"}');
-      document.head.appendChild(script);
-    }
-
-    // Update preference on checkbox toggle
-    checkbox.addEventListener("change", () => {
-      localStorage.setItem(storageKey, checkbox.checked);
-      location.reload(); // reload page to apply changes
-    });
-  </script>
   <script>
     const summaryText = document.getElementById("summary").innerText;
 
