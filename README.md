@@ -1,7 +1,7 @@
 # usr\_40476@sys:~> cat README.bruh.txt
 -------------------------------------
 
-Salutations (yea its cringe not sorry), you can call me **usr\_40476**, **40476**, or if you meet me in sky: **numbers**. I make small (ish) programs to accomplish tasks, I hope to get a career in streaming someday (something I just cant cook with (b a d   i n t e r n e t   **B T W   o\\/o**).
+Salutations (yea its cringe not sorry), you can call me **usr\_40k**, or if you meet me in sky: **numbers**. I make small (ish) programs to accomplish tasks, I hope to get a career in streaming someday (something I just cant cook with (b a d   i n t e r n e t   **B T W   o\\/o**).
 
 usr\_40476@sys:~> cat Documents/things\_I\_do.txt
 -------------------------------------------------
