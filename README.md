@@ -11,42 +11,21 @@ zsh scripting, terminal UIs (python+curses), nonsense programs (Doofus Dot Ultra
 # usr\_40476@sys:~> cat Projects/\*/README.md
 -------------------------------------------
 
-### 🎵 songUI
+### 🕹️ megaminer NG
 
-A terminal-based music player UI with Bluetooth and MPRIS2 integration.
+Homemade clone of the original MegaMiner Adobe Flash game in pureJS, featureing multiplayer, upgrades, and social functions
 
-*   Bluetooth/local audio support
-*   Announce track info with espeak
-*   Visualize audio with cava (eyecandy go brrr)
-*   Self contained
-
-[View on GitHub](https://github.com/40476/songUI)
-
-### 💬 voicething
-
-*   whisper audio transcription to TTS (inspired by what Zentreya uses but its garbage and is made for Linux) 
-*   DBus integration
-*   Buggy af but it gets the job done
-
-[View on GitHub](https://github.com/40476/voicething)
+[View on GitHub]([https://github.com/40476/web-gizmos/tree/main/megaminer)
 
 ### ⌨️ g510s
 
 Custom Linux support for the Logitech G510s keyboard.
-
-*   Reverse-engineered giggety drivers
-*   Macro and LCD support
 
 [View on GitHub](https://github.com/40476/g510s)
 
 ### 📡 streamonline
 
 A terminal-native livestream checker for Linux.
-
-*   Streamlink + systemd integration
-*   Low-bandwidth and resource compatible
-*   Opens streams in browser or media player
-*   Self contained
 
 [View on GitHub](https://github.com/40476/streamonline)
 
