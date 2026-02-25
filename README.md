@@ -15,7 +15,7 @@ zsh scripting, terminal UIs (python+curses), nonsense programs (Doofus Dot Ultra
 
 Homemade clone of the original MegaMiner Adobe Flash game in pureJS, featureing multiplayer, upgrades, and social functions
 
-[View on GitHub]([https://github.com/40476/web-gizmos/tree/main/megaminer)
+[View on GitHub](https://github.com/40476/web-gizmos/tree/main/megaminer)
 
 ### ⌨️ g510s
 
