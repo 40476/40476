@@ -6,7 +6,7 @@ Salutations (yea its cringe not sorry), you can call me **usr\_40k**, or if you 
 usr\_40k@sys:~> cat Documents/things\_I\_do.txt
 -------------------------------------------------
 
-zsh scripting, terminal UIs (python+curses), nonsense programs ([Doofus Dot Ultra](http://gizmos.usr40k.dev/doofusdot/)), &lt;more stuff when i remember to add it&gt;
+zsh scripting, terminal UIs (python+curses), nonsense programs such as [Doofus Dot Ultra](http://gizmos.usr40k.dev/doofusdot/), web games, github actions, small tools, and also an upcoming matrix bot (its not fancy dont get excited).
 
 # usr\_40k@sys:~> cat stats.md
 -------------------------------------------
