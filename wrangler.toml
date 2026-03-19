@@ -1,0 +1,3 @@
+# In wrangler.toml
+[ignore]
+files = [".git", ".github"]
