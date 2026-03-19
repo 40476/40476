@@ -1,12 +1,12 @@
 # usr\_40k@sys:~> cat README (67).txt
 -------------------------------------
 
-Salutations (yea its cringe not sorry), you can call me **usr\_40k**, or if you meet me in sky: **numbers**. I make small (ish) programs to accomplish tasks, I hope to get a career in streaming someday (something I just cant cook with (b a d   i n t e r n e t   **B T W   o\\/o**).
+Salutations (yea its cringe not sorry), you can call me **usr\_40k**, or if you meet me in sky: **numbers**. I make small (ish) programs to accomplish tasks, I hope to get a career in streaming someday (man I wish I had better internet).
 
 usr\_40k@sys:~> cat Documents/things\_I\_do.txt
 -------------------------------------------------
 
-zsh scripting, terminal UIs (python+curses), nonsense programs (Doofus Dot Ultra - coming soon!), &lt;more stuff when i remember to add it&gt;
+zsh scripting, terminal UIs (python+curses), nonsense programs ([Doofus Dot Ultra](http://gizmos.usr40k.dev/doofusdot/)), &lt;more stuff when i remember to add it&gt;
 
 # usr\_40k@sys:~> cat stats.md
 -------------------------------------------
@@ -14,10 +14,15 @@ zsh scripting, terminal UIs (python+curses), nonsense programs (Doofus Dot Ultra
 
 # usr\_40k@sys:~> cat Projects/\*/README.md
 -------------------------------------------
+### 🛠️ Web Gizmos
+
+Various HTML projects and is deployed to [gizmos.usr40k.dev](https://gizmos.usr40k.dev) an [40476.github.io/web-gizmos](https://40476.github.io/web-gizmos)**.
+
+[View on GitHub](https://github.com/40476/web-gizmos/tree/main/megaminer)
 
 ### 🕹️ megaminer NG
 
-Homemade clone of the original MegaMiner Adobe Flash game in pureJS, featureing multiplayer, upgrades, and social functions
+Homemade clone of the original MegaMiner Adobe Flash game in pureJS, featuring multiplayer, upgrades, and social functions.
 
 [View on GitHub](https://github.com/40476/web-gizmos/tree/main/megaminer)
 
