@@ -210,6 +210,48 @@ footer a {
   border: 5px solid #AAAAAA;
 }
 
+/* Badge Styling */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  border-radius: 3px;
+  margin-right: 5px;
+  background: #333;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+.badge-lang { background: #004444; border-color: #008888; }
+.badge-fork { background: #444400; border-color: #888800; color: #ffff00; }
+
+/* Visual Feedback for Clickable Header */
+.project-header {
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.2s ease, transform 0.1s ease;
+  border: 1px solid transparent;
+}
+
+.project-header:hover {
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.project-header:active {
+  transform: scale(0.99);
+  background: rgba(0, 255, 0, 0.1);
+}
+
+.toggle-hint {
+  display: block;
+  margin-top: 8px;
+  font-family: monospace;
+  color: #00ff00;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
 
 .sound-button {
   padding: 20px 40px;
