@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>usr_40k</title>
+  <title>usr40k</title>
   <link rel="icon" type="image/webp" href="media/images/WiZE.webp" />
   <link rel="stylesheet" href="media/css/hack.css">
   <link rel="stylesheet" href="style.css" />
@@ -223,55 +223,66 @@
       const container = document.getElementById('github-projects-container');
       
       try {
-        // Fetch public repos, sorted by most recently updated
-        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`);
+        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=15`);
         const repos = await response.json();
         
-        container.innerHTML = ''; // Clear loading text
-  
+        container.innerHTML = ''; 
+    
         repos.forEach(repo => {
-          // Create the card structure
+          // Format the date (e.g., "Oct 24, 2023")
+          const updatedDate = new Date(repo.updated_at).toLocaleDateString(undefined, {
+            year: 'numeric', month: 'short', day: 'numeric'
+          });
+    
           const card = document.createElement('div');
           card.className = 'card project-card';
           
+          // Build badges HTML
+          let badges = `<span class="badge">📅 Updated: ${updatedDate}</span>`;
+          if (repo.language) badges += `<span class="badge badge-lang">💻 ${repo.language}</span>`;
+          if (repo.fork) badges += `<span class="badge badge-fork">⑂ Forked</span>`;
+    
           card.innerHTML = `
-            <div class="project-header" style="cursor: pointer;">
-              <h3>📂 ${repo.name}</h3>
-              <p>${repo.description || 'No description provided.'}</p>
-              <span class="toggle-hint">[ Click to view README.md ]</span>
+            <div class="project-header">
+              <h3>${repo.fork ? '🍴' : '📂'} ${repo.name}</h3>
+              <div class="repo-meta">${badges}</div>
+              <p style="margin-top: 8px;">${repo.description || 'No description available.'}</p>
+              <span class="toggle-hint">>> [ Expand README ] <<</span>
             </div>
-            <div class="readme-content" style="display: none; margin-top: 15px; padding-top: 15px; border-top: 1px dashed #555;">
-              <p><i>Loading README...</i></p>
+            <div class="readme-content" style="display: none; margin-top: 15px; padding: 15px; border-top: 1px dashed #444; background: #0a0a0a;">
+              <p><i>System: Accessing GitHub servers...</i></p>
             </div>
-            <br>
-            <a href="${repo.html_url}" target="_blank" class="github-link">View on GitHub</a>
+            <div style="margin-top: 10px;">
+              <a href="${repo.html_url}" target="_blank" style="text-decoration: underline; font-size: 0.8rem;">🔗 repo_url</a>
+            </div>
           `;
-  
-          // Logic for expanding and fetching README
+    
           const header = card.querySelector('.project-header');
           const content = card.querySelector('.readme-content');
+          const hint = card.querySelector('.toggle-hint');
           
           header.addEventListener('click', async () => {
             const isCollapsed = content.style.display === 'none';
             
             if (isCollapsed) {
               content.style.display = 'block';
-              header.querySelector('.toggle-hint').textContent = '[ Click to collapse ]';
+              hint.textContent = '<< [ Collapse ] >>';
+              hint.style.color = '#ff0000'; // Change color when open
               
-              // Only fetch if we haven't loaded it yet
               if (content.getAttribute('data-loaded') !== 'true') {
                 await fetchReadme(repo.full_name, content);
               }
             } else {
               content.style.display = 'none';
-              header.querySelector('.toggle-hint').textContent = '[ Click to view README.md ]';
+              hint.textContent = '>> [ Expand README ] <<';
+              hint.style.color = '#00ff00';
             }
           });
-  
+    
           container.appendChild(card);
         });
       } catch (error) {
-        container.innerHTML = `<p style="color: red;">Error loading repos: ${error.message}</p>`;
+        container.innerHTML = `<p style="color: red;">ERROR: Could not contact GitHub API.</p>`;
       }
     }
   
