@@ -241,6 +241,7 @@
           let badges = `<span class="badge">📅 Updated: ${updatedDate}</span>`;
           if (repo.language) badges += `<span class="badge badge-lang">💻 ${repo.language}</span>`;
           if (repo.fork) badges += `<span class="badge badge-fork">⑂ Forked</span>`;
+          if (repo.html_url) badges += `<span class="badge><a href="${repo.html_url}" target="_blank" style="text-decoration: underline; font-size: 0.8rem;">🔗 repo_url</a></span>`;
     
           card.innerHTML = `
             <div class="project-header">
@@ -251,9 +252,6 @@
             </div>
             <div class="readme-content" style="display: none; margin-top: 15px; padding: 15px; border-top: 1px dashed #444; background: #0a0a0a;">
               <p><i>System: Accessing GitHub servers...</i></p>
-            </div>
-            <div style="margin-top: 10px;">
-              <a href="${repo.html_url}" target="_blank" style="text-decoration: underline; font-size: 0.8rem;">🔗 repo_url</a>
             </div>
           `;
     
