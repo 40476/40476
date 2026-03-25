@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="media/css/aos.css" />
 
   <!-- Header Preloader: Tries primary dev URL, falls back to GitHub -->
-  <script>["https://header.usr40k.dev/injector.js","https://40476.github.io/header/injector.js"].reduce((p,u)=>p.catch(()=>fetch(u,{method:'HEAD'}).then(r=>r.ok?import(u):Promise.reject())),Promise.reject());</script>
+  <script>(function loadScripts(urls){function tryNext(i){if(i>=urls.length) return;const s=document.createElement("script");s.src=urls[i];s.onload=()=>console.log("Loaded:",urls[i]);s.onerror=()=>{console.warn("Failed:",urls[i]);tryNext(i+1);};document.head.appendChild(s);}tryNext(0);})(["https://header.usr40k.dev/injector.js","https://40476.github.io/header/injector.js"]);</script>
 
   <noscript>
     <style>
@@ -31,7 +31,6 @@
 
   <div id="main-content" style="display: none;">
     <main class="terminal">
-      <!-- The Mega Navbar will be injected here automatically by injector.js -->
 
       <section id="about" class="block" data-aos="fade-up">
         <div class="hero-wrapper">
