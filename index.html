@@ -1,212 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>usr40k</title>
-    <link rel="icon" type="image/webp" href="media/images/WiZE.webp" />
-    <link rel="stylesheet" href="media/css/hack.css">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="media/css/aos.css" /><!-- Header Preloader: Tries primary dev URL, falls back to GitHub -->
-    <script>["https://header.usr40k.dev/injector.js","https://40476.github.io/header/injector.js"].reduce((p,u)=>p.catch(()=>fetch(u,{method:'HEAD'}).then(r=>r.ok?import(u):Promise.reject())),Promise.reject());</script>
-    <noscript>
-      <style>
-        #splash {
-          display: none;
-        }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>usr40k</title>
+  <link rel="icon" type="image/webp" href="media/images/WiZE.webp" />
+  <link rel="stylesheet" href="media/css/hack.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="media/css/aos.css" />
 
-        #main-content {
-          display: block !important;
-        }
-      </style>
-    </noscript>
-  </head>
+  <!-- Header Preloader: Tries primary dev URL, falls back to GitHub -->
+  <script>
+    (function() {
+      const s = ["https://header.usr40k.dev/injector.js", "https://40476.github.io/header/injector.js"];
+      const load = (i) => {
+        if (i >= s.length) return;
+        const script = document.createElement('script');
+        script.src = s[i];
+        script.onerror = () => load(i + 1);
+        document.head.appendChild(script);
+      };
+      load(0);
+    })();
+  </script>
 
-  <body>
-    <div id="splash"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ201h0"><img src="media/images/WiZE.webp" alt="W i Z E splash logo" /></a></div>
-    <div id="main-content" style="display: none;">
-      <main class="terminal"><!-- The Mega Navbar will be injected here automatically by injector.js -->
-        <section id="about" class="block" data-aos="fade-up">
-          <div class="hero-wrapper">
-            <iframe class="bg-iframe" src="matrix.html?text=none" frameborder="0"></iframe>
-            <header class="hero" data-aos="fade-down">
-              <h1>usr40k@sys:~> whoami</h1>
-            </header>
+  <noscript>
+    <style>
+      #splash { display: none; }
+      #main-content { display: block !important; }
+    </style>
+  </noscript>
+</head>
+
+<body>
+
+  <div id="splash">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ201h0">
+      <img src="media/images/WiZE.webp" alt="W i Z E splash logo" />
+    </a>
+  </div>
+
+  <div id="main-content" style="display: none;">
+    <main class="terminal">
+      <!-- The Mega Navbar will be injected here automatically by injector.js -->
+
+      <section id="about" class="block" data-aos="fade-up">
+        <div class="hero-wrapper">
+          <iframe class="bg-iframe" src="matrix.html?text=none" frameborder="0"></iframe>
+          <header class="hero" data-aos="fade-down">
+            <h1>usr40k@sys:~> whoami</h1>
+          </header>
+        </div>
+
+        <div class="flex-box spaced">
+          <div>
+            <br>
+            <div style="background:#005555;" class="stat_base stat_anim">BRUH</div>
+            <center><br>Bruh</center>
           </div>
-
-          <div class="flex-box spaced">
-            <div>
-              <br>
-              <div style="background:#005555;" class="stat_base stat_anim">BRUH</div>
-              <center><br>Bruh</center>
-            </div>
-            <div>
-              <br>
-              <div style="background:#005555;" class="stat_base statlong_anim">I WISH</div>
-              <center><br>VTuber</center>
-            </div>
-            <div>
-              <br>
-              <div style="background:#005555;" class="stat_base stat_anim">100%</div>
-              <center><br>Zoomer</center>
-            </div>
-            <div>
-              <br>
-              <div style="background:#005555;" class="stat_base stat_anim">100%</div>
-              <center><br>Maniac</center>
-            </div>
+          <div>
+            <br>
+            <div style="background:#005555;" class="stat_base statlong_anim">I WISH</div>
+            <center><br>VTuber</center>
           </div>
-
-          <h2>usr40k@sys:~> cat README (67).md</h2>
-          <p id="summary">
-            Salutations (yea its cringe not sorry), you can call me <b>usr40k</b>, or
-            if you meet me in sky: <b>numbers</b>. I make small (ish) programs to accomplish
-            tasks, I hope to get a career in streaming someday (man I wish I had better internet).
-          </p>
-          <h2>usr40k@sys:~> cat Documents/things_I_do.txt</h2>
-          <p>
-            zsh scripting, terminal UIs (python+curses),
-            nonsense programs such as <a href="http://gizmos.usr40k.dev/doofusdot/" target="_blank">Doofus Dot Ultra</a>,
-            web games, github actions, small tools, and also an upcoming matrix bot.
-          </p>
-        </section>
-
-        <section id="projects" class="block" data-aos="fade-up">
-          <h2>usr40k@sys:~> ls -R Projects/</h2>
-          <div id="github-projects-container">
-            <p class="loading-text">Fetching repositories from GitHub...</p>
+          <div>
+            <br>
+            <div style="background:#005555;" class="stat_base stat_anim">100%</div>
+            <center><br>Zoomer</center>
           </div>
-        </section>
+          <div>
+            <br>
+            <div style="background:#005555;" class="stat_base stat_anim">100%</div>
+            <center><br>Maniac</center>
+          </div>
+        </div>
 
-        <section id="memes" class="block" data-aos="fade-up">
-          <h2>usr40k@sys:~> ls /run/media/usr40k/Media/memes/ </h2><br>
-          <div id="soundboard"></div>
-        </section>
+        <h2>usr40k@sys:~> cat README (67).md</h2>
+        <p id="summary">
+          Salutations (yea its cringe not sorry), you can call me <b>usr40k</b>, or
+          if you meet me in sky: <b>numbers</b>. I make small (ish) programs to accomplish
+          tasks, I hope to get a career in streaming someday (man I wish I had better internet).
+        </p>
+        <h2>usr40k@sys:~> cat Documents/things_I_do.txt</h2>
+        <p>
+          zsh scripting, terminal UIs (python+curses),
+          nonsense programs such as <a href="http://gizmos.usr40k.dev/doofusdot/" target="_blank">Doofus Dot Ultra</a>,
+          web games, github actions, small tools, and also an upcoming matrix bot.
+        </p>
+      </section>
 
-        <section id="links_and_contact" class="block" data-aos="fade-up">
-          <h2>usr40k@sys:~> cat links_and_contact.txt</h2><br>
-          <ul>
-            <li>PIXIV : <a href="https://www.pixiv.net/en/users/109219544">usr40k</a></li>
-            <li>Matrix : <a href="https://matrix.to/#/@usr_40476:4d2.org" target="_blank">@usr_40476:4d2.org</a></li>
-            <li>Github : <a href="https://github.com/40476">usr40k</a></li>
-          </ul>
-        </section>
+      <section id="projects" class="block" data-aos="fade-up">
+        <h2>usr40k@sys:~> ls -R Projects/</h2>
+        <div id="github-projects-container">
+          <p class="loading-text">Fetching repositories from GitHub...</p>
+        </div>
+      </section>
 
-        <section id="stats" class="block" data-aos="fade-up">
-          <h2>usr40k@sys:~> ./Projects/random/stats.sh</h2><br>
-          <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=40476&theme=transparent" alt="GH Profile Details">
-          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=40476&layout=compact&theme=transparent" alt="Top Langs">
-          <img src="https://github-readme-stats.vercel.app/api?username=40476&show_icons=true&theme=transparent" alt="General Stats">
-        </section>
-      </main>
+      <section id="memes" class="block" data-aos="fade-up">
+        <h2>usr40k@sys:~> ls /run/media/usr40k/Media/memes/ </h2><br>
+        <div id="soundboard"></div>
+      </section>
 
-      <script src="media/js/aos.js"></script>
-      <script>
-        AOS.init();
-      </script>
-    </div>
+      <section id="links_and_contact" class="block" data-aos="fade-up">
+        <h2>usr40k@sys:~> cat links_and_contact.txt</h2><br>
+        <ul>
+          <li>PIXIV : <a href="https://www.pixiv.net/en/users/109219544">usr40k</a></li>
+          <li>Matrix : <a href="https://matrix.to/#/@usr_40476:4d2.org" target="_blank">@usr_40476:4d2.org</a></li>
+          <li>Github : <a href="https://github.com/40476">usr40k</a></li>
+        </ul>
+      </section>
+
+      <section id="stats" class="block" data-aos="fade-up">
+        <h2>usr40k@sys:~> ./Projects/random/stats.sh</h2><br>
+        <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=40476&theme=transparent" alt="GH Profile Details">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=40476&layout=compact&theme=transparent" alt="Top Langs">
+        <img src="https://github-readme-stats.vercel.app/api?username=40476&show_icons=true&theme=transparent" alt="General Stats">
+      </section>
+    </main>
+
+    <script src="media/js/aos.js"></script>
     <script>
-      window.onload = function() {
-          const validPages = ["about", "memes", "projects", "stats", "links_and_contact"];
-          const params = new URLSearchParams(window.location.search);
-          const pageParam = params.get("page");
-          const sectionToShow = validPages.includes(pageParam) ? pageParam : validPages[0]; // Handle Splash Animation
-          document.getElementById( & quot; splash & quot;).style.animation = & quot;
-          fadeOut 2 s ease 2 s forwards & quot;;
-          // Show Main Content
-          document.getElementById( & quot; main - content & quot;).style.display = & quot;
-          block & quot;;
-          document.querySelectorAll( & #39;.block&# 39;).forEach(section = & gt;
-          {
-            section.style.display = section.id === sectionToShow ? & #39;block&# 39;: & #39;none&# 39;;
-          });
-          // Claim IPv4 Game
-          fetch( & quot; https: //ipv4.games/claim?name=usr40k&quot;);
-          };
-          // Metadata Logic
-          const summaryText = document.getElementById( & quot; summary & quot;).innerText;
-          let descTag = document.querySelector( & quot; meta[name = & #39;description&# 39;] & quot;) || document.createElement( & quot; meta & quot;);
-          descTag.name = & quot;
-          description & quot;;
-          descTag.content = summaryText;
-          if (!descTag.parentNode) document.head.appendChild(descTag);
-          // GitHub Repo Fetching (Main Page Gallery)
-          const GITHUB_USERNAME = & #39;40476&# 39;;
-          async function fetchGitHubRepos() {
-              const container = document.getElementById( & #39;github-projects-container&# 39;);
-              try {
-                const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&amp;per_page=15`);
-                const repos = await response.json();
-                container.innerHTML = & #39;&# 39;;
-                repos.forEach(repo = & gt;
-                    {
-                      const updatedDate = new Date(repo.updated_at).toLocaleDateString(undefined, {
-                        year: & #39;numeric&# 39;,
-                        month: & #39;short&# 39;,
-                        day: & #39;numeric&# 39;
-                      });
-                      const card = document.createElement( & #39;div&# 39;);
-                      card.className = & #39;card project-card&# 39;;
-                      let badges = `&lt;span class=&quot;badge&quot;&gt;📅 Updated: ${updatedDate}&lt;/span&gt;`;
-                      if (repo.language) badges += `&lt;span class=&quot;badge badge-lang&quot;&gt;💻 ${repo.language}&lt;/span&gt;`;
-                      card.innerHTML = `
-        &lt;div class=&quot;project-header&quot;&gt;
-          &lt;h3&gt;${repo.fork ? &#39;🍴&#39; : &#39;📂&#39;} ${repo.name}&lt;/h3&gt;
-          &lt;div class=&quot;repo-meta&quot;&gt;${badges}&lt;/div&gt;
-          &lt;p style=&quot;margin-top: 8px;&quot;&gt;${repo.description || &#39;No description available.&#39;}&lt;/p&gt;
-          &lt;span class=&quot;toggle-hint&quot;&gt;&gt;&gt; [ Expand README ] &lt;&lt;&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;readme-content&quot; style=&quot;display: none; margin-top: 15px; padding: 15px; border-top: 1px dashed #444; background: #0a0a0a;&quot;&gt;
-          &lt;p&gt;&lt;i&gt;System: Accessing GitHub servers...&lt;/i&gt;&lt;/p&gt;
-        &lt;/div&gt;
-      `;
-                      const header = card.querySelector( & #39;.project-header&# 39;);
-                      const content = card.querySelector( & #39;.readme-content&# 39;);
-                      const hint = card.querySelector( & #39;.toggle-hint&# 39;);
-                      header.addEventListener( & #39;click&# 39;, async () = & gt;
-                        {
-                          if (content.style.display === & #39;none&# 39;) {
-                            content.style.display = & #39;block&# 39;;
-                            hint.textContent = & #39;&lt;&lt; [ Collapse ] &gt;&gt;&# 39;;
-                            hint.style.color = & #39;# ff0000 & #39;;
-          if (content.getAttribute(&# 39;
-                            data - loaded & #39;) != = & #39;true&# 39;) {
-                            await fetchReadme(repo.full_name, content);
-                          }
-                        } else {
-                          content.style.display = & #39;none&# 39;;
-                          hint.textContent = & #39;&gt;&gt; [ Expand README ] &lt;&lt;&# 39;;
-                          hint.style.color = & #39;# 00 ff00 & #39;;
-        }
-      });
-      container.appendChild(card);
-    });
-  } catch (error) {
-    container.innerHTML = `&lt;p style=&quot;color: red;&quot;&gt;ERROR: Could not contact GitHub API.&lt;/p&gt;`;
-                        }
-                      }
-                      async function fetchReadme(repoFullName, container) {
-                        try {
-                          const response = await fetch(`https://api.github.com/repos/${repoFullName}/readme`, {
-                            headers: {
-                              &
-                              #39;Accept&# 39;: & #39;application/vnd.github.v3.html&# 39;
-                            }
-                          });
-                          if (response.ok) {
-                            const html = await response.text();
-                            container.innerHTML = `&lt;div class=&quot;markdown-body&quot;&gt;${html}&lt;/div&gt;`;
-                          } else {
-                            container.innerHTML = `&lt;p&gt;README not found.&lt;/p&gt;`;
-                          }
-                          container.setAttribute( & #39;data-loaded&# 39;, & #39;true&# 39;);
-                        } catch (err) {
-                          container.innerHTML = `&lt;p&gt;Failed to load README.&lt;/p&gt;`;
-                        }
-                      }
-                      document.addEventListener( & #39;DOMContentLoaded&# 39;, fetchGitHubRepos);
+      AOS.init();
     </script>
-  </body>
+  </div>
+
+  <script>
+    window.onload = function() {
+      const validPages = ["about", "memes", "projects", "stats", "links_and_contact"];
+      const params = new URLSearchParams(window.location.search);
+      const pageParam = params.get("page");
+      const sectionToShow = validPages.includes(pageParam) ? pageParam : validPages[0];
+
+      // Handle Splash Animation
+      const splash = document.getElementById("splash");
+      if (splash) {
+        splash.style.animation = "fadeOut 2s ease 2s forwards";
+      }
+
+      // Show Main Content
+      document.getElementById("main-content").style.display = "block";
+      document.querySelectorAll('.block').forEach(section => {
+        section.style.display = section.id === sectionToShow ? 'block' : 'none';
+      });
+
+      // Claim IPv4 Game
+      fetch("https://ipv4.games/claim?name=usr40k");
+    };
+
+    // Metadata Logic
+    const summaryElement = document.getElementById("summary");
+    if (summaryElement) {
+      const summaryText = summaryElement.innerText;
+      let descTag = document.querySelector("meta[name='description']") || document.createElement("meta");
+      descTag.name = "description";
+      descTag.content = summaryText;
+      if (!descTag.parentNode) document.head.appendChild(descTag);
+    }
+
+    // GitHub Repo Fetching (Main Page Gallery)
+    const GITHUB_USERNAME = '40476';
+    async function fetchGitHubRepos() {
+      const container = document.getElementById('github-projects-container');
+      if (!container) return;
+
+      try {
+        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=15`);
+        const repos = await response.json();
+        container.innerHTML = '';
+        repos.forEach(repo => {
+          const updatedDate = new Date(repo.updated_at).toLocaleDateString(undefined, {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+          });
+          const card = document.createElement('div');
+          card.className = 'card project-card';
+          let badges = `<span class="badge">📅 Updated: ${updatedDate}</span>`;
+          if (repo.language) badges += `<span class="badge badge-lang">💻 ${repo.language}</span>`;
+
+          card.innerHTML = `
+            <div class="project-header">
+              <h3>${repo.fork ? '🍴' : '📂'} ${repo.name}</h3>
+              <div class="repo-meta">${badges}</div>
+              <p style="margin-top: 8px;">${repo.description || 'No description available.'}</p>
+              <span class="toggle-hint">>> [ Expand README ] <<</span>
+            </div>
+            <div class="readme-content" style="display: none; margin-top: 15px; padding: 15px; border-top: 1px dashed #444; background: #0a0a0a;">
+              <p><i>System: Accessing GitHub servers...</i></p>
+            </div>
+          `;
+
+          const header = card.querySelector('.project-header');
+          const content = card.querySelector('.readme-content');
+          const hint = card.querySelector('.toggle-hint');
+
+          header.addEventListener('click', async () => {
+            if (content.style.display === 'none') {
+              content.style.display = 'block';
+              hint.textContent = '<< [ Collapse ] >>';
+              hint.style.color = '#ff0000';
+              if (content.getAttribute('data-loaded') !== 'true') {
+                await fetchReadme(repo.full_name, content);
+              }
+            } else {
+              content.style.display = 'none';
+              hint.textContent = '>> [ Expand README ] <<';
+              hint.style.color = '#00ff00';
+            }
+          });
+          container.appendChild(card);
+        });
+      } catch (error) {
+        container.innerHTML = `<p style="color: red;">ERROR: Could not contact GitHub API.</p>`;
+      }
+    }
+
+    async function fetchReadme(repoFullName, container) {
+      try {
+        const response = await fetch(`https://api.github.com/repos/${repoFullName}/readme`, {
+          headers: {
+            'Accept': 'application/vnd.github.v3.html'
+          }
+        });
+        if (response.ok) {
+          const html = await response.text();
+          container.innerHTML = `<div class="markdown-body">${html}</div>`;
+        } else {
+          container.innerHTML = `<p>README not found.</p>`;
+        }
+        container.setAttribute('data-loaded', 'true');
+      } catch (err) {
+        container.innerHTML = `<p>Failed to load README.</p>`;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', fetchGitHubRepos);
+  </script>
+
+</body>
 
 </html>
