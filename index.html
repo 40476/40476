@@ -123,10 +123,9 @@
   </div>
   <script>
     window.onload = function () {
-      loadSoundboard();
-      // Get all nav options from the navbar
-      const navInputs = Array.from(document.querySelectorAll('input[name="nav"]'));
-      const validPages = navInputs.map(input => input.value);
+      // // Get all nav options from the navbar
+      // const navInputs = Array.from(document.querySelectorAll('input[name="nav"]'));
+      // const validPages = navInputs.map(input => input.value);
 
       // Read query string
       const params = new URLSearchParams(window.location.search);
@@ -136,7 +135,7 @@
       const sectionToShow = validPages.includes(pageParam) ? pageParam : validPages[0];
 
       // Set selected nav input
-      navInputs.forEach(input => input.checked = input.value === sectionToShow);
+      // navInputs.forEach(input => input.checked = input.value === sectionToShow);
 
       // After splash
       document.getElementById("splash").style.animation = "fadeOut 2s ease 2s forwards";
@@ -146,58 +145,16 @@
         section.style.display = section.id === sectionToShow ? 'block' : 'none';
       });
     };
-    document.querySelectorAll('input[name="nav"]').forEach((radio) => {
-      radio.addEventListener('change', () => {
-        const selected = radio.value;
-        document.querySelectorAll('.block').forEach((section) => {
-          section.style.display = section.id === selected ? 'block' : 'none';
-        });
-        history.pushState({}, '', `?page=${selected}`);
-      });
-    });
+    // document.querySelectorAll('input[name="nav"]').forEach((radio) => {
+    //   radio.addEventListener('change', () => {
+    //     const selected = radio.value;
+    //     document.querySelectorAll('.block').forEach((section) => {
+    //       section.style.display = section.id === selected ? 'block' : 'none';
+    //     });
+    //     history.pushState({}, '', `?page=${selected}`);
+    //   });
+    // });
 
-
-    const soundCache = {};
-
-    async function loadSoundboard() {
-      try {
-        const response = await fetch("media/audio/config.json");
-        const files = await response.json(); // expects array of {name, location, color}
-
-        const soundboard = document.getElementById("soundboard");
-        files.forEach(file => {
-          const button = document.createElement("button");
-          button.className = "sound-button";
-          button.textContent = file.name;
-          button.style.backgroundColor = file.color;
-          button.setAttribute("data-sound", file.location);
-
-          button.addEventListener("click", async () => {
-            const soundSrc = file.location;
-            if (!soundSrc) return;
-
-            if (!soundCache[soundSrc]) {
-              try {
-                const res = await fetch(soundSrc);
-                const blob = await res.blob();
-                soundCache[soundSrc] = URL.createObjectURL(blob);
-              } catch (err) {
-                console.warn("Failed to load sound:", err);
-                return;
-              }
-            }
-
-            const audio = new Audio(soundCache[soundSrc]);
-            audio.play().catch(err => console.warn("Audio play failed:", err));
-          });
-
-          soundboard.appendChild(button);
-        });
-      } catch (error) {
-        console.error("Failed to load soundboard config:", error);
-      }
-    }
-    
     const summaryText = document.getElementById("summary").innerText;
 
     // Set standard meta description
@@ -216,13 +173,12 @@
       ogTag.setAttribute("property", "og:description");
       document.head.appendChild(ogTag);
     }
+    
     ogTag.setAttribute("content", summaryText);
     window.addEventListener("load", () => {
       fetch("https://ipv4.games/claim?name=usr40k");
     });
 
-  </script>
-  <script>
     const GITHUB_USERNAME = '40476';
   
     async function fetchGitHubRepos() {
