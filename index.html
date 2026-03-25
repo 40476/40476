@@ -11,19 +11,7 @@
   <link rel="stylesheet" href="media/css/aos.css" />
 
   <!-- Header Preloader: Tries primary dev URL, falls back to GitHub -->
-  <script>
-    (function() {
-      const s = ["https://header.usr40k.dev/injector.js", "https://40476.github.io/header/injector.js"];
-      const load = (i) => {
-        if (i >= s.length) return;
-        const script = document.createElement('script');
-        script.src = s[i];
-        script.onerror = () => load(i + 1);
-        document.head.appendChild(script);
-      };
-      load(0);
-    })();
-  </script>
+  <script>["https://header.usr40k.dev/injector.js","https://40476.github.io/header/injector.js"].reduce((p,u)=>p.catch(()=>fetch(u,{method:'HEAD'}).then(r=>r.ok?import(u):Promise.reject())),Promise.reject());</script>
 
   <noscript>
     <style>
