@@ -5,8 +5,9 @@
   },
   "rules": {
     "theme": "dark",
-  },
-  "autohideregex": [
-      "fullscreen=true"
+    "autohideregex": [
+      "fullscreen=true",
+      "/canvas-view/"
     ]
+  },
 }
