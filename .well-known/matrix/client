@@ -5,7 +5,7 @@
   "org.matrix.msc4143.rtc_foci": [
     {
       "type": "livekit",
-      "livekit_service_url": "https://matrix.usr40k.dev"
+      "livekit_service_url": "https://matrix.usr40k.dev/livekit/jwt"
     }
   ]
 }
